@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Review Hub</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for a movie..." onkeyup="searchMovies()">
+        </div>
+    </header>
+    <main>
+        <section id="movie-list">
+            <div class="movie-list-img">
+                <h2>Movies</h2>
+                <img src="images/movie.svg" alt="">
+            </div>
+            <div class="movies-grid" id="movies-grid">
+                <div class="movie-card" data-title="Avengers: Endgame">
+                    <img src="images/avengers.jpeg" alt="">
+                    <h3>Avengers: Endgame</h3>
+                </div>
+                <div class="movie-card" data-title="Spider-Man: No Way Home">
+                    <img src="images/spiderman.jpeg" alt="">
+                    <h3>Spider-Man: No Way Home</h3>
+                </div>
+                <div class="movie-card" data-title="Harry Potter and the Philosopher's Stone">
+                    <img src="images/harrypotter.jpeg" alt="">
+                    <h3>Harry Potter and the Philosopher's Stone</h3>
+                </div>
+                <div class="movie-card" data-title="Furious 7">
+                    <img src="images/fasffurious2.jpeg" alt="">
+                    <h3>Furious 7</h3>
+                </div>
+                <div class="movie-card" data-title="Avatar: The Way of Water">
+                    <img src="images/avatar.jpeg" alt="">
+                    <h3>Avatar: The Way of Water</h3>
+                </div>
+                <div class="movie-card" data-title="Red Notice">
+                    <img src="images/Rednotice.jpeg" alt="">
+                    <h3>Red Notice</h3>
+                </div>
+                <div class="movie-card" data-title="Black Panther: Wakanda Forever">
+                    <img src="images/blackpanther.jpeg" alt="">
+                    <h3>Black Panther: Wakanda Forever</h3>
+                </div>
+                <div class="movie-card" data-title="The Flash">
+                    <img src="images/flash.jpeg" alt="">
+                    <h3>The Flash</h3>
+                </div>
+                <div class="movie-card" data-title="The Lion King">
+                    <img src="images/lionking.jpeg" alt="">
+                    <h3>The Lion King</h3>
+                </div>
+                <div class="movie-card" data-title="The Lord of the Rings: The Two Towers">
+                    <img src="images/lordofrings.jpeg" alt="">
+                    <h3>The Lord of the Rings: The Two Towers</h3>
+                </div>
+                <div class="movie-card" data-title="Venom">
+                    <img src="images/venom.jpeg" alt="">
+                    <h3>Venom</h3>
+                </div>
+                <div class="movie-card" data-title="Jumanji: The Next Level">
+                    <img src="images/jumanji.jpeg" alt="">
+                    <h3>Jumanji: The Next Level</h3>
+                </div>
+                <div class="movie-card" data-title="Aquaman">
+                    <img src="images/aquaman.jpeg" alt="">
+                    <h3>Aquaman</h3>
+                </div>
+                <div class="movie-card" data-title="Star Wars Ep. VII: The Force Awakens">
+                    <img src="images/starwars.jpeg" alt="">
+                    <h3>Star Wars Ep. VII: The Force Awakens</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="review-form">
+            <h2>Write a Review</h2>
+            <form id="review-form-element" onsubmit="submitReview(event)">
+                <div class="form-group">
+                    <label for="movie-title">Movie Title</label>
+                    <select id="movie-title" required>
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating (1-5)</label>
+                    <input type="number" id="rating" min="1" max="5" required>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" placeholder="What did you think?" required></textarea>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+
+        <section id="recommendations">
+            <h2>Recommended Movies</h2>
+            <div class="movies-grid" id="recommended-movies">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Movie Review Hub. Lights, camera, action!</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
